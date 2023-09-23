@@ -2,7 +2,7 @@ a=int(input())
 b=int(input())
 c=int(input())
 d=int(input())
-if -1 <= c - a <= 1  and -1 <= d - b <= 1:
-    print ('YES')
+if (abs(a-c)==2 and abs(b-d)==1) or (abs(b-d)==2 and abs(a-c)==1):
+    print('YES')
 else:
     print('NO')

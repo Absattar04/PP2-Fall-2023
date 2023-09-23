@@ -1,6 +1,8 @@
-a=int(input())
-b=int(input())
-c=int(input())
-s=a//2+b//2+c//2
-x=a%2+b%2+c%2
-print(s+x)
+x = int(input())
+y = int(input())
+z = int(input())
+s = int(input())
+if (x == z or y == s):
+    print('YES')
+else:
+    print('NO')
