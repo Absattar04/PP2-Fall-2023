@@ -1,8 +1,5 @@
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-if abs(a - c) == abs(b - d) or a == c or b == d:
-    print('YES')
-else:
-    print('NO')
+a = [int(i) for i in input().split()]
+min_index = a.index(min(a))
+max_index = a.index(max(a))
+[a[max_index], a[min_index]] = [a[min_index], a[max_index]]
+print(' '.join([str(i) for i in a]))

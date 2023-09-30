@@ -1,7 +1,5 @@
-x = int(input())
-if x > 0:
-    print(1)
-elif x == 0:
-    print(0)
-else:
-    print(-1)
+a = input()
+x = [ int(a) for a in a.split()]
+for i in x:
+    if int(i) % 2 == 0:
+        print(i, end=' ')

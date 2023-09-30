@@ -1,14 +1,7 @@
-n = int(input())
-m = int(input())
-x = int(input())
-y = int(input())
-if n > m:
-    n, m = m, n
-if x >= n / 2:
-    x = n - x
-if y >= m / 2:
-    y = m - y
-if x < y:
-    print(x)
-else:
-    print(y)
+a = [int(s) for s in input().split()]
+counter = 0
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if a[i] == a[j]:
+            counter += 1
+print(counter)

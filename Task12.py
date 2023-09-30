@@ -1,7 +1,7 @@
-n = int(input())
-m = int(input())
-k = int(input())
-if k < n * m and ((k % n == 0) or (k % m == 0)):
-    print('YES')
-else:
-    print('NO')
+a = [int(s) for s in input().split()]
+k, C = [int(s) for s in input().split()]
+a.append(0)
+for i in range(len(a) - 1, k, -1):
+    a[i] = a[i - 1]
+a[k] = C
+print(' '.join([str(i) for i in a]))

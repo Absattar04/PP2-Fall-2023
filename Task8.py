@@ -1,8 +1,6 @@
-a=int(input())
-b=int(input())
-c=int(input())
-d=int(input())
-if -1 <= c - a <= 1  and -1 <= d - b <= 1:
-    print ('YES')
-else:
-    print('NO')
+a = [int(i) for i in input().split()]
+num = 1
+for i in range(0, len(a) - 1):
+    if a[i] != a[i + 1]:
+        num += 1
+print(num)

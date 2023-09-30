@@ -1,8 +1,6 @@
-a=int(input())
-b=int(input())
-c=int(input())
-d=int(input())
-if (abs(a-c)==2 and abs(b-d)==1) or (abs(b-d)==2 and abs(a-c)==1):
-    print('YES')
-else:
-    print('NO')
+a = [int(s) for s in input().split()]
+x = int(input())
+for i in range(x + 1, len(a)):
+    a[i - 1] = a[i]
+a.pop()
+print(' '.join([str(i) for i in a]))

@@ -1,9 +1,6 @@
-x = int(input())
-y = int(input())
-z = int(input())
-if (x == y == z):
-    print('3')
-elif (x == y or x == z or y == z):
-    print('2')
-else:
-    print('0')
+index = 0
+a = [int(i) for i in input().split()]
+for i in range(1, len(a)):
+    if a[i] > a[index]:
+        index = i
+print(a[index], index)

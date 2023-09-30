@@ -1,5 +1,5 @@
-x = int(input())
-if ((x % 4 == 0 and x % 100 !=0) or x % 400 == 0):
-    print('YES')
-else:
-    print('NO')
+x = [int(i) for i in input().split()]
+for i in range(1, len(x)):
+    if x[i - 1] * x[i] >= 0:
+        print(x[i - 1], x[i], end=' ')
+        break

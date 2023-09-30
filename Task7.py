@@ -1,8 +1,6 @@
+a = [int(i) for i in input().split()]
 x = int(input())
-y = int(input())
-z = int(input())
-s = int(input())
-if (x == z or y == s):
-    print('YES')
-else:
-    print('NO')
+z = 0
+while z < len(a) and a[z] >= x:
+    z += 1
+print(z + 1)

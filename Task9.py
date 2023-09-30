@@ -1,8 +1,4 @@
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-if (a-b) == (c-d) or (a+b) == (c+d):
-    print('YES')
-else:
-    print('NO')
+a = [int(i) for i in input().split()]
+for i in range(1, len(a), 2):
+    a[i - 1], a[i] = a[i], a[i - 1]
+print(' '.join([str(i) for i in a]))

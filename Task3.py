@@ -1,8 +1,4 @@
-x = int(input())
-y = int(input())
-z = int(input())
-a = int(input())
-if ((x + y + z + a) % 2 == 0):
-    print('YES')
-else:
-    print('NO')
+x = [int(i) for i in input().split()]
+for i in range(1, len(x)):
+    if x[i] > x[i - 1]:
+        print(x[i], end=' ')
