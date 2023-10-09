@@ -1,6 +1,16 @@
-a = [int(i) for i in input().split()]
 x = int(input())
-z = 0
-while z < len(a) and a[z] >= x:
-    z += 1
-print(z + 1)
+n = set(range(1, x + 1))
+s = 0
+while True:
+    s = input()
+    if s == "HELP":
+        break
+    else:
+        a = set(list(map(int, s.split())))
+        s = input()
+        if s == "YES":
+            n = n & a
+        else:
+            n = n - a
+n = sorted(n)
+print(*n)

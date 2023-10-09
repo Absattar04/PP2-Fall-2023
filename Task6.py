@@ -1,6 +1,7 @@
-index = 0
-a = [int(i) for i in input().split()]
-for i in range(1, len(a)):
-    if a[i] > a[index]:
-        index = i
-print(a[index], index)
+a = int(input())
+w = set()
+for i in range(a):
+    S = input().split()
+    for elem in S:
+        w.add(elem)
+print(len(w))

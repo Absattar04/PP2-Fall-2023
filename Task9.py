@@ -1,4 +1,15 @@
-a = [int(i) for i in input().split()]
-for i in range(1, len(a), 2):
-    a[i - 1], a[i] = a[i], a[i - 1]
-print(' '.join([str(i) for i in a]))
+lang = []
+union = set()
+all = set()
+for i in range(int(input())):
+    m = int(input())
+    a = {input() for j in range(m)}
+    all.update(a)
+    if len(union) == 0:
+        union.update(a)
+    else:
+        union &= a
+print(len(union))
+print('\n'.join(sorted(union)))
+print(len(all))
+print('\n'.join(sorted(all)))

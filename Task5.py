@@ -1,6 +1,10 @@
-a = [int(i) for i in input().split()]
-counter = 0
-for i in range(1, len(a) - 1):
-    if a[i - 1] < a[i] > a[i + 1]:
-        counter += 1
-print(counter)
+N, M = (int(i) for i in input().split())
+Anya = [int(input()) for i in range(N)]
+Borya = [int(input()) for i in range(M)]
+A, B = set(Anya), set(Borya)
+print(len(A & B))
+print(' '.join([str(i) for i in A & B]))
+print(len(A - B))
+print(*sorted(A - B, key=int))
+print(len(B - A))
+print(' '.join([str(i) for i in B - A]))
